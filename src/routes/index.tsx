@@ -47,12 +47,12 @@ const testimonials = [
     name: 'Elena Dumitrescu',
     age: 25,
     role: 'Financial Analyst – Big 4 România',
-    stars: 5,
-    text: 'Absolviseam Economie dar nu știam unde să mă plasez pe piața muncii. YCP mi-a arătat că profilul meu se potrivea perfect pentru o carieră în consultanță financiară. M-au ajutat cu CV-ul, cu pregătirea pentru interviuri și cu networking-ul strategic. Am obținut oferta de la primul Big 4 la care am aplicat, ceva ce nu credeam posibil.',
+    stars: 4,
+    text: 'Absolvisem Facultatea de Economie dar nu știam unde să mă plasez pe piața muncii. YCP mi-a arătat că profilul meu se potrivea perfect pentru o carieră în consultanță financiară. M-au ajutat cu CV-ul, cu pregătirea pentru interviuri și cu networking-ul strategic. Am obținut oferta de la primul Big 4 la care am aplicat, ceva ce nu credeam posibil.',
     achievement: 'Angajată la Big 4 la primul interviu',
   },
   {
-    name: 'Radu Constantin',
+    name: 'Adrian Constantin',
     age: 19,
     role: 'Student la Automatică – Politehnica București',
     stars: 5,
@@ -66,6 +66,14 @@ const testimonials = [
     stars: 5,
     text: 'Mă blocam la nivel de senior specialist de 4 ani și nu știam cum să fac pasul spre management. Prin programul de coaching YCP, am descoperit că îmi lipseau nu competențele tehnice, ci cele de leadership. Am lucrat intensiv pe comunicare, delegare și gestionarea conflictelor. În 3 luni am primit o promovare cu 40% mărire salarială.',
     achievement: 'Promovare + 40% creștere salarială',
+  },
+  {
+    name: 'Anca Avram',
+    age: 29,
+    role: 'QA Engineer – Big 4 România',
+    stars: 5,
+    text: 'De 5 ani îmi doream o reconversie profesională. Lucram în audit financiar şi îmi doream mai mult, fiind pasionată de programare şi învăţând deja de câţiva ani. Fără YCP, nu aș fi reuşit niciodată să îmi găsesc un job în IT într-un timp atât de scurt, mai ales la o firmă de renume.',
+    achievement: 'Angajată la Big 4 după reconversie profesională',
   },
 ]
 
