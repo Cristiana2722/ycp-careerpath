@@ -598,6 +598,38 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
+            Urmărește-ne pe Rețele Sociale
+          </h2>
+          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
+            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://www.instagram.com/ycp.careerpath/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram @ycp.careerpath
+            </a>
+            <a
+              href="https://www.tiktok.com/@ycp.careerpath"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <TikTokIcon />
+              TikTok @ycp.careerpath
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ─── PREȚURI ──────────────────────────────────────────────────────── */}
       <section id="preturi" className="py-20 bg-blue-700 dark:bg-blue-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
@@ -853,38 +885,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
-            Urmărește-ne pe Rețele Sociale
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
-            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://www.instagram.com/ycp.careerpath/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram @ycp.careerpath
-            </a>
-            <a
-              href="https://www.tiktok.com/@ycp.careerpath"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <TikTokIcon />
-              TikTok @ycp.careerpath
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </main>
   )
 }
