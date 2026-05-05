@@ -27,26 +27,6 @@ export default function Footer() {
               disponibilă în toată România. Îți oferim instrumentele și ghidarea de care ai nevoie
               pentru a-ți atinge obiectivele.
             </p>
-            <div className="flex gap-3 mt-5">
-              <a
-                href="https://www.instagram.com/ycp.careerpath/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-slate-800 hover:bg-pink-600 transition-colors text-slate-300 hover:text-white"
-                aria-label="Instagram YCP"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@ycp.careerpath"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-slate-800 hover:bg-slate-600 transition-colors text-slate-300 hover:text-white"
-                aria-label="TikTok YCP"
-              >
-                <TikTokIcon />
-              </a>
-            </div>
           </div>
 
           {/* Contact */}
@@ -67,6 +47,26 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+                      <div className="flex gap-3 mt-5">
+              <a
+                href="https://www.instagram.com/ycp.careerpath/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-slate-800 hover:bg-pink-600 transition-colors text-slate-300 hover:text-white"
+                aria-label="Instagram YCP"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@ycp.careerpath"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg bg-slate-800 hover:bg-slate-600 transition-colors text-slate-300 hover:text-white"
+                aria-label="TikTok YCP"
+              >
+                <TikTokIcon />
+              </a>
+            </div>
         </div>
 
         <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
