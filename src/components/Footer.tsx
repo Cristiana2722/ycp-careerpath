@@ -46,7 +46,8 @@ export default function Footer() {
                 <span>Disponibil în toată România<br />(exclusiv online)</span>
               </li>
             </ul>
-                        <div className="flex gap-3 mt-5">
+            
+            <div className="flex gap-3 mt-5">
               <a
                 href="https://www.instagram.com/ycp.careerpath/"
                 target="_blank"
@@ -65,7 +66,8 @@ export default function Footer() {
               >
                 <TikTokIcon />
               </a>
-            </div>
+          </div>
+            
           </div>
         </div>
 
