@@ -47,12 +47,12 @@ const testimonials = [
     name: 'Elena Dumitrescu',
     age: 25,
     role: 'Financial Analyst – Big 4 România',
-    stars: 5,
-    text: 'Absolviseam Economie dar nu știam unde să mă plasez pe piața muncii. YCP mi-a arătat că profilul meu se potrivea perfect pentru o carieră în consultanță financiară. M-au ajutat cu CV-ul, cu pregătirea pentru interviuri și cu networking-ul strategic. Am obținut oferta de la primul Big 4 la care am aplicat, ceva ce nu credeam posibil.',
+    stars: 4,
+    text: 'Absolvisem Facultatea de Economie din oraşul natal dar nu știam unde să mă plasez pe piața muncii. YCP mi-a arătat că profilul meu se potrivea perfect pentru o carieră în consultanță financiară. M-au ajutat cu CV-ul, cu pregătirea pentru interviuri și cu networking-ul strategic. Am obținut oferta de la primul Big 4 la care am aplicat, ceva ce nu credeam posibil.',
     achievement: 'Angajată la Big 4 la primul interviu',
   },
   {
-    name: 'Radu Constantin',
+    name: 'Adrian Constantin',
     age: 19,
     role: 'Student la Automatică – Politehnica București',
     stars: 5,
@@ -66,6 +66,14 @@ const testimonials = [
     stars: 5,
     text: 'Mă blocam la nivel de senior specialist de 4 ani și nu știam cum să fac pasul spre management. Prin programul de coaching YCP, am descoperit că îmi lipseau nu competențele tehnice, ci cele de leadership. Am lucrat intensiv pe comunicare, delegare și gestionarea conflictelor. În 3 luni am primit o promovare cu 40% mărire salarială.',
     achievement: 'Promovare + 40% creștere salarială',
+  },
+  {
+    name: 'Anca Avram',
+    age: 29,
+    role: 'QA Engineer – Big 4 România',
+    stars: 5,
+    text: 'De 5 ani îmi doream o reconversie profesională. Lucram în audit financiar şi îmi doream mai mult, fiind pasionată de programare şi învăţând deja de câţiva ani. Fără YCP, nu aș fi reuşit niciodată să îmi găsesc un job în IT într-un timp atât de scurt, mai ales la o firmă de renume.',
+    achievement: 'Angajată la Big 4 după reconversie profesională',
   },
 ]
 
@@ -691,38 +699,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
-            Urmărește-ne pe Rețele Sociale
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
-            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://www.instagram.com/ycp.careerpath/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram @ycp.careerpath
-            </a>
-            <a
-              href="https://www.tiktok.com/@ycp.careerpath"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <TikTokIcon />
-              TikTok @ycp.careerpath
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ─── CONTACT ──────────────────────────────────────────────────────── */}
       <section id="contact" className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -820,6 +796,24 @@ function HomePage() {
               )}
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CHESTIONAR ──────────────────────────────────────────────────────── */}
+      <section id="contact" className="py-20 bg-white dark:bg-slate-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-3">Pentru Clienţi</p>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4">
+              Oferă-ne Feedback
+            </h2>
+            <div className="section-divider" />
+            <p className="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+              Ești client YCP? Ajută-ne să ne îmbunătățim completând acest scurt chestionar.
+            </p>
+          </div>
+
             {/* Questionnaire */}
             <div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-5 flex items-center gap-2">
@@ -827,9 +821,6 @@ function HomePage() {
                 Chestionar de Satisfacție
               </h3>
               <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700">
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-5">
-                  Ești client YCP? Ajută-ne să ne îmbunătățim completând acest scurt chestionar.
-                </p>
                 {surveySent ? (
                   <div className="text-center py-6">
                     <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-2" />
@@ -904,6 +895,39 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
+            Urmărește-ne pe Rețele Sociale
+          </h2>
+          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
+            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://www.instagram.com/ycp.careerpath/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram @ycp.careerpath
+            </a>
+            <a
+              href="https://www.tiktok.com/@ycp.careerpath"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <TikTokIcon />
+              TikTok @ycp.careerpath
+            </a>
+          </div>
+        </div>
+      </section>
+      
     </main>
   )
 }
