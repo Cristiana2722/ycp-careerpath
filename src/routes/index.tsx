@@ -464,33 +464,6 @@ function HomePage() {
             </div>
           </div>
 
-          {/* AUDIO */}
-          <div className="mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center">
-                <Mic className="w-4 h-4 text-indigo-700 dark:text-indigo-400" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Podcast YCP</h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <AudioCard
-                episode="Ep. 12"
-                title="Povestea Mariei: de la respingere la locul 3 la medicină"
-                duration="28:43"
-              />
-              <AudioCard
-                episode="Ep. 11"
-                title="CV-ul care deschide uși: secrete de la recrutori"
-                duration="34:15"
-              />
-              <AudioCard
-                episode="Ep. 10"
-                title="Anxiety de carieră: cum o transformi în combustibil"
-                duration="41:52"
-              />
-            </div>
-          </div>
-
           {/* TEXT ARTICLES PREVIEW */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -699,38 +672,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
-            Urmărește-ne pe Rețele Sociale
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
-            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://www.instagram.com/ycp.careerpath/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram @ycp.careerpath
-            </a>
-            <a
-              href="https://www.tiktok.com/@ycp.careerpath"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <TikTokIcon />
-              TikTok @ycp.careerpath
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ─── CONTACT ──────────────────────────────────────────────────────── */}
       <section id="contact" className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -909,6 +850,38 @@ function HomePage() {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SOCIAL MEDIA ─────────────────────────────────────────────────── */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
+            Urmărește-ne pe Rețele Sociale
+          </h2>
+          <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm">
+            Sfaturi zilnice de carieră, povești inspiraționale și conținut exclusiv disponibil pe Instagram și TikTok.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://www.instagram.com/ycp.careerpath/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <Instagram className="w-5 h-5" />
+              Instagram @ycp.careerpath
+            </a>
+            <a
+              href="https://www.tiktok.com/@ycp.careerpath"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-slate-900 dark:bg-slate-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            >
+              <TikTokIcon />
+              TikTok @ycp.careerpath
+            </a>
           </div>
         </div>
       </section>
