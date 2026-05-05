@@ -801,7 +801,7 @@ function HomePage() {
       </section>
 
       {/* ─── CHESTIONAR ──────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-20 bg-white dark:bg-slate-900">
+      <section id="chestionar" className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-3">Pentru Clienţi</p>
