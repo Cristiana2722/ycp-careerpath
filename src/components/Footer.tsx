@@ -80,11 +80,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-slate-400">
                 <Mail className="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" />
-                <span>contact@yourcareerpath.ro</span>
+                <span>yourcareerpath@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-slate-400">
                 <Phone className="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" />
-                <span>+40 700 000 000</span>
+                <span>+40 777 777 777</span>
               </li>
               <li className="flex items-start gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" />
