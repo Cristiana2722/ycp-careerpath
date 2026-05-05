@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Blog', href: '/blog' },
   { label: 'Prețuri', href: '/#preturi' },
   { label: 'Contact', href: '/#contact' },
+  { label: 'Feedback', href: '/#chestionar' },
 ]
 
 export default function Header() {

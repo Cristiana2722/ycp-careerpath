@@ -35,8 +35,20 @@ function BlogIndex() {
               className="group flex flex-col sm:flex-row gap-6 bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow"
             >
               {/* Thumbnail */}
-              <div className="sm:w-56 aspect-video sm:aspect-auto flex-shrink-0 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 relative flex items-center justify-center">
+              {/* <div className="sm:w-56 aspect-video sm:aspect-auto flex-shrink-0 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 relative flex items-center justify-center">
                 <FileText className="w-10 h-10 text-blue-400/60" />
+                <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">
+                  {post.category}
+                </span>
+              </div> */}
+
+              <div className="sm:w-56 aspect-video sm:aspect-auto flex-shrink-0 relative overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+
                 <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">
                   {post.category}
                 </span>

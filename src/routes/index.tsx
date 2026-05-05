@@ -120,56 +120,31 @@ const services = [
 
 // ─── VideoCard ─────────────────────────────────────────────────────────────────
 
-function VideoCard({ title, duration, category }: { title: string; duration: string; category: string }) {
+function VideoCard({ title, duration, category, videoId }: { title: string; duration: string; category: string; videoId: string }) {
   return (
-    <div className="rounded-2xl overflow-hidden shadow-md card-hover bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
-      <div className="relative aspect-video bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 flex items-center justify-center">
-        <div className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 30% 50%, #3b82f6 0%, transparent 50%), radial-gradient(circle at 70% 30%, #6366f1 0%, transparent 50%)',
-          }}
+    <div className="rounded-2xl overflow-hidden shadow-md bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+      
+      {/* YouTube Embed */}
+      <div className="relative aspect-video bg-black">
+        <iframe
+          className="w-full h-full"
+          src={`https://www.youtube.com/embed/${videoId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
-        <button
-          className="relative w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center hover:bg-white/30 transition-colors border border-white/30"
-          aria-label="Redă video"
-        >
-          <Play className="w-6 h-6 text-white ml-1" />
-        </button>
-        <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-0.5 rounded">
-          {duration}
-        </div>
-        <div className="absolute top-3 left-3 bg-blue-600/80 text-white text-xs px-2 py-1 rounded-full">
-          {category}
-        </div>
       </div>
+
+      {/* Info */}
       <div className="p-4">
-        <h4 className="font-semibold text-slate-900 dark:text-white text-sm leading-tight">{title}</h4>
-      </div>
-    </div>
-  )
-}
+        <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
+          <span>{category}</span>
+          <span>{duration}</span>
+        </div>
 
-// ─── AudioCard ─────────────────────────────────────────────────────────────────
-
-function AudioCard({ title, duration, episode }: { title: string; duration: string; episode: string }) {
-  return (
-    <div className="rounded-2xl p-5 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm card-hover">
-      <div className="flex items-center gap-4 mb-3">
-        <div className="w-11 h-11 rounded-full bg-blue-700 flex items-center justify-center flex-shrink-0">
-          <Mic className="w-5 h-5 text-white" />
-        </div>
-        <div>
-          <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{episode}</p>
-          <h4 className="font-semibold text-slate-900 dark:text-white text-sm leading-tight">{title}</h4>
-        </div>
-      </div>
-      <div className="flex items-center justify-between">
-        <div className="audio-waveform">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <span key={i} style={{ height: `${[40, 60, 100, 75, 45, 90, 60, 30][i - 1]}%` }} />
-          ))}
-        </div>
-        <span className="text-xs text-slate-400">{duration}</span>
+        <h4 className="font-semibold text-slate-900 dark:text-white text-sm leading-tight">
+          {title}
+        </h4>
       </div>
     </div>
   )
@@ -447,19 +422,24 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               <VideoCard
-                title="Cum să alegi cariera potrivită în 2025: metodologia YCP"
+                title="Cum să alegi cariera potrivită în 2026"
                 duration="38:24"
                 category="Consiliere"
+                videoId="zhpcgpqWc1Q"
               />
+
               <VideoCard
                 title="Pregătirea pentru admitere: strategii dovedite de succes"
                 duration="44:10"
                 category="Admitere"
+                videoId="TjPFZaMe2yw"
               />
+
               <VideoCard
                 title="Reconversie profesională: de la 0 la angajare în 12 luni"
                 duration="52:07"
                 category="Reconversie"
+                videoId="MIjH8MCbONI"
               />
             </div>
           </div>
@@ -474,9 +454,9 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {[
-                { title: 'Ghidul Complet de Admitere 2025', pages: '42 pag.', tag: 'Admitere' },
-                { title: 'Dicționarul Carierei: 100 de Termeni pe care Trebuie să îi Știi', pages: '28 pag.', tag: 'Vocabular' },
-                { title: 'Interviul de Angajare: 50 de Întrebări și Răspunsuri', pages: '65 pag.', tag: 'Interviu' },
+                { title: 'Ghidul Complet de Admitere 2026', pages: '42 pag.', tag: 'Admitere' },
+                { title: 'Dicționarul Carierei: 100 de Termeni pe care Trebuie să îi Știi', pages: '27 pag.', tag: 'Vocabular' },
+                { title: 'Interviul de Angajare: 50 de Întrebări și Răspunsuri', pages: '67 pag.', tag: 'Interviu' },
               ].map(({ title, pages, tag }) => (
                 <div key={title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 card-hover">
                   <div className="w-11 h-14 rounded-lg bg-blue-700 flex items-center justify-center flex-shrink-0 shadow">
@@ -571,14 +551,27 @@ function HomePage() {
                 params={{ slug: post.slug }}
                 className="group bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 card-hover block"
               >
-                <div className="aspect-video bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 relative">
+                {/* <div className="aspect-video bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <FileText className="w-10 h-10 text-blue-400/60" />
                   </div>
                   <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">
                     {post.category}
                   </span>
+                </div> */}
+
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+
+                  <span className="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-medium">
+                    {post.category}
+                  </span>
                 </div>
+
                 <div className="p-5">
                   <div className="flex items-center gap-3 text-xs text-slate-400 mb-2">
                     <span>{post.date}</span>
@@ -718,7 +711,7 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="max-w-3xl mx-auto">
             <div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-5 flex items-center gap-2">
                 <MessageSquare className="w-5 h-5 text-blue-600" />
@@ -800,92 +793,125 @@ function HomePage() {
                 </form>
               )}
             </div>
-
-            {/* Questionnaire */}
-            <div>
-              <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-5 flex items-center gap-2">
-                <BarChart2 className="w-5 h-5 text-blue-600" />
-                Chestionar de Satisfacție
-              </h3>
-              <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700">
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-5">
-                  Ești client YCP? Ajută-ne să ne îmbunătățim completând acest scurt chestionar.
-                </p>
-                {surveySent ? (
-                  <div className="text-center py-6">
-                    <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-2" />
-                    <p className="font-bold text-green-700 dark:text-green-400">Îți mulțumim pentru feedback!</p>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Răspunsurile tale ne ajută să ne îmbunătățim continuu.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSurveySubmit} className="space-y-4">
-                    <input type="hidden" name="form-name" value="chestionar" />
-                    <input
-                      type="text"
-                      name="surveyName"
-                      placeholder="Numele tău (opțional)"
-                      value={survey.surveyName}
-                      onChange={(e) => setSurvey({ ...survey, surveyName: e.target.value })}
-                      className={inputClass}
-                    />
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                        Cât de mulțumit ești de serviciile YCP?
-                      </label>
-                      <StarRating value={survey.rating} onChange={(v) => setSurvey({ ...survey, rating: v })} />
-                    </div>
-                    <textarea
-                      name="liked"
-                      placeholder="Ce ți-a plăcut cel mai mult la programul YCP?"
-                      rows={2}
-                      value={survey.liked}
-                      onChange={(e) => setSurvey({ ...survey, liked: e.target.value })}
-                      className={inputClass}
-                    />
-                    <textarea
-                      name="improve"
-                      placeholder="Ce am putea îmbunătăți?"
-                      rows={2}
-                      value={survey.improve}
-                      onChange={(e) => setSurvey({ ...survey, improve: e.target.value })}
-                      className={inputClass}
-                    />
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                        Ai recomanda YCP unui prieten?
-                      </label>
-                      <div className="flex gap-3">
-                        {['Da, cu siguranță!', 'Probabil da', 'Nu știu'].map((opt) => (
-                          <label key={opt} className="flex items-center gap-1.5 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="recommend"
-                              value={opt}
-                              checked={survey.recommend === opt}
-                              onChange={(e) => setSurvey({ ...survey, recommend: e.target.value })}
-                              className="text-blue-600"
-                            />
-                            <span className="text-sm text-slate-700 dark:text-slate-300">{opt}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                    <button
-                      type="submit"
-                      disabled={surveyLoading || survey.rating === 0}
-                      className="w-full py-3 bg-slate-800 dark:bg-slate-700 hover:bg-slate-700 dark:hover:bg-slate-600 disabled:opacity-50 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 text-sm"
-                    >
-                      <Send className="w-4 h-4" />
-                      {surveyLoading ? 'Se trimite...' : 'Trimite Feedback'}
-                    </button>
-                  </form>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       </section>
       
+      {/* ─── QUESTIONNAIRE ──────────────────────────────────────── */}
+      <section id="chestionar" className="py-20 bg-slate-50 dark:bg-slate-950">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-3">
+              Feedback
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4">
+              Spune-ne Părerea Ta
+            </h2>
+            <div className="section-divider" />
+            <p className="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+              Dacă ai lucrat cu noi, feedback-ul tău ne ajută să devenim mai buni.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm">
+              {surveySent ? (
+                <div className="text-center py-6">
+                  <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-2" />
+                  <p className="font-bold text-green-700 dark:text-green-400">
+                    Îți mulțumim pentru feedback!
+                  </p>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
+                    Răspunsurile tale ne ajută să ne îmbunătățim continuu.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSurveySubmit} className="space-y-4">
+                  <input type="hidden" name="form-name" value="chestionar" />
+
+                  <input
+                    type="text"
+                    name="surveyName"
+                    placeholder="Numele tău (opțional)"
+                    value={survey.surveyName}
+                    onChange={(e) =>
+                      setSurvey({ ...survey, surveyName: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                      Cât de mulțumit ești de serviciile YCP?
+                    </label>
+                    <StarRating
+                      value={survey.rating}
+                      onChange={(v) =>
+                        setSurvey({ ...survey, rating: v })
+                      }
+                    />
+                  </div>
+
+                  <textarea
+                    name="liked"
+                    placeholder="Ce ți-a plăcut cel mai mult?"
+                    rows={2}
+                    value={survey.liked}
+                    onChange={(e) =>
+                      setSurvey({ ...survey, liked: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+
+                  <textarea
+                    name="improve"
+                    placeholder="Ce am putea îmbunătăți?"
+                    rows={2}
+                    value={survey.improve}
+                    onChange={(e) =>
+                      setSurvey({ ...survey, improve: e.target.value })
+                    }
+                    className={inputClass}
+                  />
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                      Ai recomanda YCP unui prieten?
+                    </label>
+                    <div className="flex gap-3">
+                      {['Da, cu siguranță!', 'Probabil da', 'Nu știu'].map((opt) => (
+                        <label key={opt} className="flex items-center gap-1.5 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="recommend"
+                            value={opt}
+                            checked={survey.recommend === opt}
+                            onChange={(e) =>
+                              setSurvey({ ...survey, recommend: e.target.value })
+                            }
+                          />
+                          <span className="text-sm text-slate-700 dark:text-slate-300">
+                            {opt}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={surveyLoading || survey.rating === 0}
+                    className="w-full py-3 bg-blue-700 hover:bg-blue-600 disabled:opacity-50 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
+                  >
+                    <Send className="w-4 h-4" />
+                    {surveyLoading ? 'Se trimite...' : 'Trimite Feedback'}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

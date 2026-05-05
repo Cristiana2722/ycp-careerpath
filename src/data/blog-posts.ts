@@ -5,6 +5,7 @@ export interface BlogPost {
   category: string
   excerpt: string
   readTime: string
+  image: string
   content: string
 }
 
@@ -17,6 +18,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '7 min',
     excerpt:
       'Alegerea facultății este una dintre cele mai importante decizii din viața ta. Descoperă metoda YCP de evaluare a opțiunilor academice și cum să îți aliniezi pasiunile cu cerințele pieței muncii.',
+    image: '/images/blog/facultate.png',
     content: `
       <p>Alegerea facultății reprezintă un moment crucial în viața fiecărui tânăr. Această decizie nu afectează doar următorii 3-4 ani din viața ta, ci poate contura întreaga traiectorie profesională. La YCP - Your Career Path, am dezvoltat o metodologie structurată care te ajută să iei această decizie cu claritate și încredere.</p>
 
@@ -46,6 +48,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '9 min',
     excerpt:
       'Schimbarea carierei la 30, 35 sau chiar 40 de ani nu mai este o excepție – este o realitate a pieței muncii moderne. Descoperă cum o poți face strategic și fără riscuri majore.',
+    image: '/images/blog/cariera.png',
     content: `
       <p>Statisticile arată că românii schimbă în medie 3-5 locuri de muncă de-a lungul vieții, iar reconversia profesională completă devine tot mai frecventă. Dacă simți că actuala ta carieră nu te mai satisface sau că potențialul tău este neutilizat, citește mai departe. Această transformare este posibilă – și o poți face inteligent.</p>
 
@@ -75,6 +78,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '11 min',
     excerpt:
       'Un CV bine scris poate fi diferența dintre a fi chemat la interviu și a fi ignorat. Descoperă formulele care funcționează pe piața muncii românească în 2025.',
+    image: '/images/blog/cv.png',
     content: `
       <p>Recruiterii petrec în medie 7 secunde pe fiecare CV în prima etapă de selecție. Șapte secunde pentru a decide dacă ești demn de o analiză mai atentă. La YCP - Your Career Path, am analizat sute de CV-uri de succes și am identificat elementele care fac diferența.</p>
 
