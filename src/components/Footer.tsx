@@ -49,31 +49,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
-          <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Navigare</h3>
-            <ul className="space-y-2 text-sm">
-              {[
-                ['Acasă', '/#acasa'],
-                ['Despre Noi', '/#despre'],
-                ['Servicii', '/#servicii'],
-                ['Testimoniale', '/#testimoniale'],
-                ['Blog', '/blog'],
-                ['Prețuri', '/#preturi'],
-                ['Contact', '/#contact'],
-              ].map(([label, href]) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    className="text-slate-400 hover:text-blue-400 transition-colors"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact</h3>
