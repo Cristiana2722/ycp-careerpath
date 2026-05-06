@@ -112,7 +112,7 @@ const services = [
   },
   {
     icon: Shield,
-    title: 'Coaching de Carieră Continuu',
+    title: 'Ghidare Constantă în Carieră',
     desc: 'Suport pe termen lung pentru profesioniști ambițioși: negociere salarială, avansare în carieră, tranziții la nivel de leadership.',
     color: 'bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-400',
   },
@@ -351,7 +351,7 @@ function HomePage() {
               Servicii
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4">
-              Arborele Nostru de Servicii
+              Serviciile Noastre
             </h2>
             <div className="section-divider" />
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -649,7 +649,7 @@ function HomePage() {
                 featured: true,
               },
               {
-                title: 'Coaching Executiv',
+                title: 'Dezvoltare Abilități de Conducere',
                 desc: 'Program intensiv pentru profesioniști care vizează avansarea rapidă sau o tranziție majoră.',
                 features: ['Sesiuni intensive', 'Networking facilitat', 'Mentorat personalizat', 'Suport nelimitat'],
               },
